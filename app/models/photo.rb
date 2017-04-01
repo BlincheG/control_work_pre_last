@@ -1,5 +1,6 @@
 class Photo < ApplicationRecord
 
+	has_many :comments
 	belongs_to :user
 
 	  has_attached_file :image,

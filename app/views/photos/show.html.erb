@@ -2,3 +2,29 @@
 
 
 <%= image_tag @photo.image.url(:original) %>
+
+<h2><%= link_to 'Comments', '#', id: 'comments-link' %></h2>
+<div id="comment-section">
+  <ol id="comments">
+    <%= render @photo.comments %>
+  </ol>
+
+<% if user_signed_in? %>
+	
+  <h3>Add a comment:</h3>
+  <%= form_for [@photo, @photo.comments.build] do |f| %>
+    <div>
+      Author: <%= current_user.id %>
+    </div>
+    <div>
+      Text: <%= f.text_area :content %>
+    </div>
+    <div>
+    	Score: <%= f.number_field :score, value: 5 %>
+    </div>
+
+    <%= f.submit %>
+<% end %>
+</div>
+<% end %>
+

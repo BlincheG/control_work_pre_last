@@ -9,6 +9,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'paperclip', '~> 4.3'
+gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

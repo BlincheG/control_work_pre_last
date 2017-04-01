@@ -6,7 +6,7 @@
               <div class="panel-body" align="center">
                 <div class="img"> <%= link_to image_tag(photo.image.url(:medium), size: '200'), photo_path(photo)  %></div>
                 <h3><%= photo.name %></h3>
-                <h4> By <%= photo.user %></h4>
+                <h4>By <%= photo.user.name %></h4>
               </div>
             </div>
           </div>

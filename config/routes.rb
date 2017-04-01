@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
-	resources :photos
+	resources :photos do  
+  		resources :comments
+	end  
 	root 'photos#index'
 
 	get '/user/:id' => 'user#show', as: 'user_show'
