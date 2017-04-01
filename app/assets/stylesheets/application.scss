@@ -1,2 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.picture {
+	width: 100%;
+	overflow-x: hidden;
+	display: block;
+	height: auto;
+}

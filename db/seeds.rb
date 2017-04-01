@@ -9,6 +9,7 @@
 paperclip = Rails.root + 'app' + 'assets' + 'images'
 
 admin = User.create(name: 'Admin', email: 'admin@admin.com', password: 'qweqwe', password_confirmation: 'qweqwe', admin: true)
+user1 = User.create(name: 'User', email: 'user@user.com', password: 'qweqwe', password_confirmation: 'qweqwe', admin: false)
 
 photo1 = Photo.create(name: "Honda civic", image:File.new(paperclip + "honda_civic.jpg"), user_id: 1)
 photo2 = Photo.create(name: "BMW", image:File.new(paperclip + "bmw.jpg"), user_id: 1)

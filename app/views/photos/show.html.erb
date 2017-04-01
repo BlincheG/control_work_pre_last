@@ -1,7 +1,9 @@
 <h1><%= @photo.name %></h1>
 
+   <div class="picture">
+      <%= image_tag @photo.image.url(:original), class: "picture" %>
+   </div>
 
-<%= image_tag @photo.image.url(:original) %>
 
 <h2><%= link_to 'Comments', '#', id: 'comments-link' %></h2>
 <div id="comment-section">
