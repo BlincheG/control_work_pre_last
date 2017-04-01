@@ -1,3 +1,13 @@
+<% if user_signed_in? %>
+
 <h1>Add new photo</h1>
 
 <%= render 'form' %>
+
+<% else %>
+
+<h1>У вас нет прав добавить фото, <%= link_to 'Зайдите в аккаунт', new_user_session_path %></h1>
+
+<h2>Или <%= link_to 'Зарегестрируйтесь', new_user_registration_path %></h2>
+
+<% end %>

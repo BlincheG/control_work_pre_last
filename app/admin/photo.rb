@@ -21,14 +21,27 @@ permit_params :name, :image
     f.actions
   end
 
-  show do
- 	 attributes_table do
-   row :image do |product|
-     image_tag product.image.url(:medium)
-   end
-   row :name
+  index do
+    selectable_column
+    id_column
+    column :image do |photo|
+      image_tag photo.image.url(:thumb)
+    end
+    column :title do |photo|
+      link_to photo.name, admin_photo_path(photo)
+    end
+    actions
   end
-   active_admin_comments
-	end
+
+  show do
+    attributes_table do
+      row :image do |photo|
+        image_tag photo.image.url(:medium)
+      end
+      row :title
+    end
+    active_admin_comments
+  end
+
 
 end
